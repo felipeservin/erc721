@@ -299,20 +299,22 @@ export default function Home() {
   return (
     <div className="w-screen min-h-screen">
       <ConnectWallet className="!absolute !right-4 !top-4" theme={theme} />
-      <div className="grid h-screen grid-cols-1 lg:grid-cols-12">
-        <div className="items-center justify-center hidden w-full h-full lg:col-span-5 lg:flex lg:px-12">
-          <HeadingImage
-            src={contractMetadata.data?.image || firstNft?.metadata.image || ""}
-            isLoading={isLoading}
-          />
+      <div className="grid h-screen grid-rows-1 lg:grid-rows-5">
+        <div className="items-center justify-center hidden w-full h-full lg:row-span-2 lg:flex lg:px-12">
+        <img
+              src="src/logo-alebrijes.png"
+              width={230}
+              className="buttonlogoTopDesktop"
+            />
         </div>
-        <div className="flex items-center justify-center w-full h-full col-span-1 lg:col-span-7">
-          <div className="flex flex-col w-full max-w-xl gap-4 p-12 rounded-xl lg:border lg:border-gray-400 lg:dark:border-gray-800">
+        <div className="flex items-center justify-center w-full h-full row-span-1 ">
+          <div className="flex flex-col w-full max-w-xl gap-4 p-12 rounded-xl  lg:border-gray-400 lg:dark:border-gray-800">
             <div className="flex w-full mt-8 xs:mb-8 xs:mt-0 lg:hidden">
-              <HeadingImage
-                src={contractMetadata.data?.image || firstNft?.metadata.image || ""}
-                isLoading={isLoading}
-              />
+            <img
+              src="src/logo-alebrijes.png"
+              width={185}
+              className="buttonlogoTop"
+            />
             </div>
 
             <div className="flex flex-col gap-2 xs:gap-4">
@@ -327,7 +329,7 @@ export default function Home() {
                 </div>
               ) : isOpenEdition ? null : (
                 <p>
-                  <span className="text-lg font-bold tracking-wider text-gray-500 xs:text-xl lg:text-2xl">
+                  <span className="text-lg font-bold tracking-wider text-white-500 xs:text-xl lg:text-2xl">
                     {numberClaimed}
                   </span>{" "}
                   <span className="text-lg font-bold tracking-wider xs:text-xl lg:text-2xl">
@@ -352,7 +354,7 @@ export default function Home() {
               </h1>
               {contractMetadata.data?.description ||
                 contractMetadata.isLoading ? (
-                  <div className="text-gray-500 line-clamp-2">
+                  <div className="text-black-500 line-clamp-2">
                   {contractMetadata.isLoading ? (
                     <div
                       role="status"

@@ -46,7 +46,13 @@ html {
 }
 body {
   @apply min-h-screen-safe bg-white dark:bg-black text-black dark:text-white;
+  background-image: url('src/alebrijes-fondo-min.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
 }
+
+
 
 @layer base {
   :root {
@@ -124,4 +130,20 @@ body {
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+}
+.buttonlogoTop {
+  cursor: pointer;
+  margin-top: -60px;
+  margin-bottom: 50px;
+}
+
+.buttonlogoTopDesktop {
+  cursor: pointer;
+  margin-top: 115px;
+  margin-bottom: 0px;
 }
